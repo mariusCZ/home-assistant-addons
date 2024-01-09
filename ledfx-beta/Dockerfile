@@ -67,7 +67,8 @@ RUN \
     /var/{cache,log}/* \
     /var/lib/apt/lists/* \
     \
-    && pip3 install \
+    && rm /usr/lib/python3.11/EXTERNALLY-MANAGED && \ 
+    pip3 install \
     --no-cache-dir -r /tmp/requirements.txt \
 #    && pip3 install \
 #    --no-cache-dir git+https://github.com/LedFx/LedFx \
