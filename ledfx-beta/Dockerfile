@@ -14,10 +14,10 @@ ENV PIP_EXTRA_INDEX_URL=https://www.piwheels.org/simple
 # Setup base
 ARG BUILD_ARCH
 RUN \
-    echo "deb     http://snapshot.debian.org/archive/debian/20220616/ bullseye main" >> /etc/apt/sources.list
-    echo "deb-src http://snapshot.debian.org/archive/debian/20220616/ bullseye main" >> /etc/apt/sources.list
-    echo "deb     http://snapshot.debian.org/archive/debian-security/20220616/ bullseye/updates main" >> /etc/apt/sources.list
-    echo "deb-src http://snapshot.debian.org/archive/debian-security/20220616/ bullseye/updates main" >> /etc/apt/sources.list
+    printf "deb     http://snapshot.debian.org/archive/debian/20220616/ bullseye main" >> /etc/apt/sources.list
+    printf "deb-src http://snapshot.debian.org/archive/debian/20220616/ bullseye main" >> /etc/apt/sources.list
+    printf "deb     http://snapshot.debian.org/archive/debian-security/20220616/ bullseye/updates main" >> /etc/apt/sources.list
+    printf "deb-src http://snapshot.debian.org/archive/debian-security/20220616/ bullseye/updates main" >> /etc/apt/sources.list
     
     apt-get update && apt-get install -y --no-install-recommends \
     build-essential \
