@@ -16,8 +16,8 @@ ARG BUILD_ARCH
 RUN \
     printf "deb     http://snapshot.debian.org/archive/debian/20230507/ bullseye main\n" >> /etc/apt/sources.list && \
     printf "deb-src http://snapshot.debian.org/archive/debian/20230507/ bullseye main\n" >> /etc/apt/sources.list && \
-    printf "deb     http://snapshot.debian.org/archive/debian-security/20230507/ bullseye/updates main\n" >> /etc/apt/sources.list && \
-    printf "deb-src http://snapshot.debian.org/archive/debian-security/20230507/ bullseye/updates main\n" >> /etc/apt/sources.list && \
+    # printf "deb     http://snapshot.debian.org/archive/debian-security/20230507/ bullseye/updates main\n" >> /etc/apt/sources.list && \
+    # printf "deb-src http://snapshot.debian.org/archive/debian-security/20230507/ bullseye/updates main\n" >> /etc/apt/sources.list && \
     apt-get update && apt-get install -y --no-install-recommends \
     build-essential \
     libavformat58 \
