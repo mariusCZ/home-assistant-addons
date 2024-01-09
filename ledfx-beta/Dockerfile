@@ -59,7 +59,7 @@ RUN \
     libavutil-dev \
     libswresample-dev \
     libswresample3 \
-    libavresample-dev \
+    # libavresample-dev \
     libsndfile1-dev \
     librubberband-dev \
     libsamplerate0-dev \
