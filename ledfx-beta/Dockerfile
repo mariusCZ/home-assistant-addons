@@ -18,6 +18,10 @@ RUN \
     printf "deb-src http://snapshot.debian.org/archive/debian/20220616/ bullseye main" >> /etc/apt/sources.list && \
     printf "deb     http://snapshot.debian.org/archive/debian-security/20220616/ bullseye/updates main" >> /etc/apt/sources.list && \
     printf "deb-src http://snapshot.debian.org/archive/debian-security/20220616/ bullseye/updates main" >> /etc/apt/sources.list && \
+    printf "deb     http://snapshot.debian.org/archive/debian/20211031/ bullseye main" >> /etc/apt/sources.list && \
+    printf "deb-src http://snapshot.debian.org/archive/debian/20211031/ bullseye main" >> /etc/apt/sources.list && \
+    printf "deb     http://snapshot.debian.org/archive/debian-security/20211031/ bullseye/updates main" >> /etc/apt/sources.list && \
+    printf "deb-src http://snapshot.debian.org/archive/debian-security/20211031/ bullseye/updates main" >> /etc/apt/sources.list && \
     apt-get update && apt-get install -y --no-install-recommends \
     build-essential \
     libavformat58 \
@@ -56,7 +60,7 @@ RUN \
     libavutil56 \
     libavcodec-dev \
     libavformat-dev \
-    libavutil-dev \
+    libavutil-dev=7:4.3.3-0+deb11u1\
     libswresample-dev \
     libswresample3 \
     libavresample-dev \
