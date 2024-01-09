@@ -14,14 +14,10 @@ ENV PIP_EXTRA_INDEX_URL=https://www.piwheels.org/simple
 # Setup base
 ARG BUILD_ARCH
 RUN \
-    printf "deb     http://snapshot.debian.org/archive/debian/20220616/ bullseye main" >> /etc/apt/sources.list && \
-    printf "deb-src http://snapshot.debian.org/archive/debian/20220616/ bullseye main" >> /etc/apt/sources.list && \
-    printf "deb     http://snapshot.debian.org/archive/debian-security/20220616/ bullseye/updates main" >> /etc/apt/sources.list && \
-    printf "deb-src http://snapshot.debian.org/archive/debian-security/20220616/ bullseye/updates main" >> /etc/apt/sources.list && \
-    printf "deb     http://snapshot.debian.org/archive/debian/20211031/ bullseye main" >> /etc/apt/sources.list && \
-    printf "deb-src http://snapshot.debian.org/archive/debian/20211031/ bullseye main" >> /etc/apt/sources.list && \
-    printf "deb     http://snapshot.debian.org/archive/debian-security/20211031/ bullseye/updates main" >> /etc/apt/sources.list && \
-    printf "deb-src http://snapshot.debian.org/archive/debian-security/20211031/ bullseye/updates main" >> /etc/apt/sources.list && \
+    printf "deb     http://snapshot.debian.org/archive/debian/20230430/ bullseye main" >> /etc/apt/sources.list && \
+    printf "deb-src http://snapshot.debian.org/archive/debian/20230430/ bullseye main" >> /etc/apt/sources.list && \
+    printf "deb     http://snapshot.debian.org/archive/debian-security/20230430/ bullseye/updates main" >> /etc/apt/sources.list && \
+    printf "deb-src http://snapshot.debian.org/archive/debian-security/20230430/ bullseye/updates main" >> /etc/apt/sources.list && \
     apt-get update && apt-get install -y --no-install-recommends \
     build-essential \
     libavformat58 \
@@ -54,16 +50,16 @@ RUN \
     python3-aubio \
     aubio-tools \
     python3-numpy \
-    libavcodec58 \
-    libchromaprint1 \
-    libavresample4 \
-    libavutil56 \
-    libavcodec-dev \
-    libavformat-dev \
-    libavutil-dev=7:4.3.3-0+deb11u1\
-    libswresample-dev \
-    libswresample3 \
-    libavresample-dev \
+    libavcodec58=7:4.3.6-0+deb11u1 \
+    libchromaprint \
+    libavresample4=7:4.3.6-0+deb11u1 \
+    libavutil56=7:4.3.6-0+deb11u1 \
+    libavcodec-dev=7:4.3.6-0+deb11u1 \
+    libavformat-dev=7:4.3.6-0+deb11u1 \
+    libavutil-dev=7:4.3.6-0+deb11u1 \
+    libswresample-dev=7:4.3.6-0+deb11u1 \
+    libswresample3=7:4.3.6-0+deb11u1 \
+    libavresample-dev=7:4.3.6-0+deb11u1 \
     libsndfile1-dev \
     librubberband-dev \
     libsamplerate0-dev \
