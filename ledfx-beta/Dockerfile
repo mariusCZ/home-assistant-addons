@@ -121,11 +121,11 @@ RUN \
     unzip \
     \
     && apt-get update && apt-get install -y --no-install-recommends \
-    python3-aubio=0.4.9-4+b4 \
-    avahi-daemon=0.8-5+deb11u2\
-    aubio-tools=0.4.9-4+b4 \
-    python3-numpy=1:1.19.5-1 \
-    libasound2-plugins=1.2.2-2 \
+    python3-aubio \
+    avahi-daemon \
+    aubio-tools \
+    python3-numpy \
+    libasound2-plugins \
     && apt-get clean -y \
     && apt-get autoremove -y \
     && rm -fr \
