@@ -20,7 +20,7 @@ RUN \
     # printf "deb-src http://snapshot.debian.org/archive/debian-security/20230507/ bullseye/updates main\n" >> /etc/apt/sources.list && \
     apt-get update && apt-get install -y --no-install-recommends \
     build-essential \
-    libavformat58 \
+    libavformat59 \
     libasound2-plugins \
     cython3 \
     gcc \
@@ -50,16 +50,16 @@ RUN \
     python3-aubio \
     aubio-tools \
     python3-numpy \
-    libavcodec58=7:4.3.6-0+deb11u1 \
+    libavcodec58 \
     libchromaprint \
-    libavresample4=7:4.3.6-0+deb11u1 \
-    libavutil56=7:4.3.6-0+deb11u1 \
-    libavcodec-dev=7:4.3.6-0+deb11u1 \
-    libavformat-dev=7:4.3.6-0+deb11u1 \
-    libavutil-dev=7:4.3.6-0+deb11u1 \
-    libswresample-dev=7:4.3.6-0+deb11u1 \
-    libswresample3=7:4.3.6-0+deb11u1 \
-    libavresample-dev=7:4.3.6-0+deb11u1 \
+    libavresample4 \
+    libavutil56 \
+    libavcodec-dev \
+    libavformat-dev \
+    libavutil-dev \
+    libswresample-dev \
+    libswresample3 \
+    libavresample-dev \
     libsndfile1-dev \
     librubberband-dev \
     libsamplerate0-dev \
@@ -104,16 +104,16 @@ RUN \
     libtiff5-dev \
     \
     # aubio dependencies 
-    libavcodec58 \
+    libavcodec59 \
     libchromaprint1 \
-    libavresample4 \
-    libavutil56 \
+    # libavresample4 \
+    libavutil57 \
     libavcodec-dev \
     libavformat-dev \
     libavutil-dev \
     libswresample-dev \
-    libswresample3 \
-    libavresample-dev \
+    libswresample4 \
+    # libavresample-dev \
     libsndfile1-dev \
     librubberband-dev \
     libsamplerate0-dev \
