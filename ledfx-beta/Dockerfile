@@ -24,8 +24,8 @@ RUN \
     libatlas3-base=3.10.3-10 \
     zlib1g-dev=1:1.2.11.dfsg-2+deb11u2 \
     portaudio19-dev=19.6.0-1.1 \
-    python3-dev=3.11.2-1 \
-    python3=3.11.2-1 \
+    python3-dev \
+    python3 \
     python3-pip=20.3.4-4+deb11u1 \
     nginx=1.18.0-6.1+deb11u3 \
     unzip=6.0-26+deb11u1 \
