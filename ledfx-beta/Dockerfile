@@ -51,7 +51,7 @@ RUN \
     aubio-tools \
     python3-numpy \
     libavcodec58 \
-    libchromaprint \
+    libchromaprint1 \
     libavresample4 \
     libavutil56 \
     libavcodec-dev \
