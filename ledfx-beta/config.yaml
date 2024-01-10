@@ -37,4 +37,4 @@ schema:
   keyfile: str
   ssl: bool
   leave_front_door_open: bool?
-image: "ghcr.io/mariusCZ/{arch}-addon-ledfx"
+image: "ghcr.io/mariuscz/{arch}-addon-ledfx"
